@@ -1,0 +1,28 @@
+p {
+background-color: pink;
+}
+
+
+.Default {
+	display: block;
+	margin: 5px 5px 5px 5px;
+	width: 150px;
+	height: 45px;
+	font-size: 24pt;
+	font-weight: bold;
+	color: black;
+	}
+            
+input[type="range"] {
+	display: block;
+	width: 150px;
+	height: 45px;
+	}
+
+.LOW {
+	background-color: white;
+}
+
+.HIGH {
+	background-color: red;
+}

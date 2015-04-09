@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content = "height = device-height, width = 420, user-scalable = no" /> 
+	<link rel="stylesheet" href="style.css">
+        <title>BeebeHome</title>
+	<h1 align="center">Beebes Home</h1>
+	<h2 align="center"></h2>
+        
+	<script type="text/javascript" src="/webiopi.js"></script>
+        <script type="text/javascript">
+        webiopi().ready(function() {
+                var content, button;
+                left = $("#left");
+		middle = $("#middle");
+		right = $("#right");
+		
+                
+                // create a button which call myMacroWithoutArgs
+                button = webiopi().createMacroButton("macro", "FAN ON", "D0_TurnOn");
+                middle.append(button); // append button to content div
+
+		// create a button which call myMacroWithoutArgs
+                button = webiopi().createMacroButton("macro", "FAN OFF", "D0_TurnOff");
+                middle.append(button); // append button to content div
+
+		// create a button which call myMacroWithoutArgs
+                button = webiopi().createMacroButton("macro", "AUX ON", "D1_TurnOn");
+                middle.append(button); // append button to content div
+
+		// create a button which call myMacroWithoutArgs
+                button = webiopi().createMacroButton("macro", "AUX OFF", "D1_TurnOff");
+                middle.append(button); // append button to content div
+
+                // create a button which call myMacroWithoutArgs
+                button = webiopi().createMacroButton("macro", "PULSE FAN", "D0_TurnOn");
+                middle.append(button); // append button to content div
+        });   
+        
+        </script>
+
+</head>
+<body>
+	<div id="left" align="left"></div>
+        <div id="middle" align="middle"></div>
+	<div id="right" align="right"></div>
+</body>
+</html>
